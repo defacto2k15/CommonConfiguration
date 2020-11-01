@@ -1,0 +1,69 @@
+set relativenumber
+set number
+
+" https://github.com/JetBrains/ideavim/blob/master/doc/emulated-plugins.md
+
+" https://youtrack.jetbrains.com/issue/VIM-1970 
+set set highlightedyank
+
+" https://youtrack.jetbrains.com/issue/VIM-959
+set ideamarks
+
+" https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set ideajoin
+
+" https://youtrack.jetbrains.com/issue/VIM-1521
+set commentary
+
+" dia daa cia caa
+set argtextobj
+
+" die dae cie cae
+set textobj-entire
+
+" https://github.com/JetBrains/ideavim/wiki/Select-mode
+" set selectmode-=template
+
+"  Mouseless Driven Development by Hadi Hariri https://www.youtube.com/watch?v=UH6YVv9js3s 
+" https://github.com/JetBrains/ideavim
+" https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
+" https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
+set surround
+let mapleader = ","
+
+
+" Ctrl + F12 in idea.
+map <Leader>s :action FileStructurePopup<CR>
+
+" These shortcuts mimic the default Idea action for one edition mode, using the
+" Vim action for the other.
+"
+" Same as default IDEA action, but only in normal mode. Delete previous char
+" in insert mode.
+" See also Ctrl + Shift + H for method hierarchy, Ctrl + Alt + H for call
+" hierarchy.
+map <C-h> :action TypeHierarchy<CR>
+" Same as default IDEA action, but only in insert mode. Enter block-visual
+" mode in normal mode.
+imap <C-v> <Esc>:action $Paste<CR>
+
+
+" The default C-o and C-i behaviours have certain inconsistencies with
+" Vim which I can't quite pinpoint.
+" I'm using the default IntelliJ behaviours instead.
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nnoremap g; :action JumpToLastChange<CR>
+nnoremap g, :action JumpToNextChange<CR>
+
+
+map <Space>r :action RenameElement<CR>
+map <Space>e :action GotoNextError<CR>
+map <Space>E :action ShowErrorDescription<CR>
+map <Space>u :action FindUsages<CR>
+map <Space>[ :action EditorCodeBlockStart<CR>
+map <Space>] :action EditorCodeBlockEnd<CR>
+map <Space>v :action IntroduceVariable<CR>
+map <Space>p :action IntroduceParameter<CR>
+map <Space>m :action ExtractMethod<CR>
+map <Space>i :action GotoImplementation<CR>
