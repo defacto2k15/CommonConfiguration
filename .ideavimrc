@@ -67,3 +67,5 @@ map <Space>v :action IntroduceVariable<CR>
 map <Space>p :action IntroduceParameter<CR>
 map <Space>m :action ExtractMethod<CR>
 map <Space>i :action GotoImplementation<CR>
+map <Space>b :action GotoSuperMethod<CR>
+map <Space>d :action GotoImplementation<CR>
