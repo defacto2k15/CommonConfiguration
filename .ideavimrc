@@ -66,6 +66,9 @@ map <Space>] :action EditorCodeBlockEnd<CR>
 map <Space>v :action IntroduceVariable<CR>
 map <Space>p :action IntroduceParameter<CR>
 map <Space>m :action ExtractMethod<CR>
-map <Space>i :action GotoImplementation<CR>
+map <Space>d :action GotoDeclaration<CR>
+map <Space>i :action Inline<CR>
 map <Space>b :action GotoSuperMethod<CR>
-map <Space>d :action GotoImplementation<CR>
+
+
+" For tab changes. ALT + Arrow Left/Right
