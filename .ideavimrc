@@ -69,6 +69,6 @@ map <Space>m :action ExtractMethod<CR>
 map <Space>d :action GotoDeclaration<CR>
 map <Space>i :action Inline<CR>
 map <Space>b :action GotoSuperMethod<CR>
-
+map <Space>n :action GotoImplementation<CR>
 
 " For tab changes. ALT + Arrow Left/Right
